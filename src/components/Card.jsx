@@ -8,7 +8,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCard, updateCard, addCard } from "../slices/bucketSlice";
-import { ItemTypes } from "./Listitem";
 import { useDrag } from "react-dnd";
 import VideoPlayer from "./VideoPlayer";
 import Modal from "./Modal";
@@ -18,6 +17,9 @@ import { useRef } from "react";
 import MenuList from "./MenuList";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
+export const ItemTypes = {
+  CARD: "card",
+};
 export default function CardComp({
   title,
   link,
@@ -141,8 +143,8 @@ export default function CardComp({
           }}
           size="small"
         >
-          {" "}
-          <DeleteIcon />{" "}
+          
+          <DeleteIcon />
         </Button>
       </CardActions>
     </Card>
